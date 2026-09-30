@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Webpage Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="fade-overlay"></div>
+
+    <!-- Screen 1 -->
+<section id="screen-username" class="screen active">
+  <h2>Sign In</h2>
+  <p>Enter your username</p>
+
+  <div class="input-group">
+    <input type="text" id="username-input" placeholder="Enter username">
+    <button type="button" id="btn-username">Sign In</button>
+  </div>
+</section>
+
+
+  <!-- Screen 2 -->
+  <section id="screen-dob" class="screen">
+    <h2 id="welcome-heading">Welcome !</h2>
+    <p>Enter your date of birth</p>
+    <div class="input-group">
+    <input type="date" id="dob-input">
+    <button type="button" id="btn-dob">Verify</button>
+  </div>
+
+  <p id="dob-error" class="error-msg"></p>
+</section>
+
+  <!-- Screen 3 -->
+  <section id="screen-surprise" class="screen">
+    <div class="typing-container">
+    <span class="type-line line-1">Wait...</span>
+    <span class="type-line line-2">It's your birthday today?</span>
+    <span class="type-line line-3">What a coincidence...</span>
+    <span class="type-line line-4">I kinda have something for you.</span>
+  </div>
+
+  <button type="button" id="btn-surprise" class="fade-in-btn">Oh really?</button>
+</section>
+
+  <!-- Screen 4 -->
+  <section id="screen-gift" class="screen">
+    <h2>You wanna see what's in here?</h2>
+    <p>Click on it!.</p>
+
+    <div id="gift-box" class="clickable">
+        <img id="gift-img" src="https://img.itch.zone/aW1hZ2UvMjQ0MjE1Mi8xNDQ2NTk0Ny5wbmc=/347x500/%2BN9ep2.png" alt="Gift Box">
+    </div>
+    <button type="button" id="btn-gift">Open the gift</button>
+  </section>
+
+  <!-- Screen 5 -->
+  <section id="screen-cake" class="screen">
+    <h2>Make a cake!</h2>
+    <p>Choose your cake and flavor!</p>
+
+    <div class="container">
+        <img id="cake-img" src="pixel/vanilla.png" alt="Cake">
+    </div>
+
+    <div class="flavors">
+        <button type="button" onclick="changeCake('chocolate')">Chocolate</button>
+        <button type="button" onclick="changeCake('vanilla')">Vanilla</button>
+        <button type="button" onclick="changeCake('strawberry')">Strawberry</button>
+        <button type="button" onclick="changeCake('redvelvet')">Red Velvet</button>
+        <button type="button" onclick="changeCake('cheesecake')">Cheesecake</button>
+    </div>
+      <button type="button" id="btn-concake">Start baking!</button>
+  </section>
+
+  <!-- Screen 6 -->
+  <section id="screen-wish" class="screen">
+    <h2>Make a wish and blow the candle!</h2>
+    
+    <div class="cake-display">
+      <div id="candle-flame" class="flame"></div>
+      <img id="candle-img" src="pixel/candle.png" alt="Candle"> 
+      <img id="lit-cake-img" src="pixel/vanilla.png" alt="Cake">
+    </div>
+
+    <p id="wish-prompt">Did you make a wish yet?</p>
+
+    <div id="wish-actions">
+      <button type="button" id="btn-wish">Yes, I did!</button>
+      <button type="button" id="btn-blow" style="display: none;">Blow!</button>
+    </div>
+  </section>
+
+  <!-- Screen 7 -->
+  <section id="screen-envelope" class="screen">
+    <div id="envelope-container">
+        <img id="envelope-img" src="pixel/envelope.png" alt="Envelope">
+        <button type="button" id="btn-envelope">What's that?</button>
+    </div>
+  </section>
+
+  <!-- Screen 8 -->
+<div id="letter-modal" class="popup-overlay">
+    <div id="screen-letter" class="note-card">
+      <h2>Happy Birthday, Wendy!</h2>
+      <p>Happy birthday to you my sunshine ❤️ <br> Your 17th birthday, isn't it? <br> I hope it's the happiest day for you today. <br> I love you and obviously you know that. <br> Hope you like the website I made for you. <br> Definitely not that good yet due to lack of time and knowledge lmao. <br> Thanks for being an entertainer in my life. <br> I'll always be there by your side. <br> You turn around and you will always see me, you get that? <br> Happy birthday to the who never failed to make me laugh. <br> Love you ❤️❤️❤️</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <audio id="bg-music" src="pixel/happy.mp3" loop></audio>
+
+</body>
+</html>
